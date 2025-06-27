@@ -11,7 +11,7 @@ resource "aws_eks_node_group" "demo_node_group" {
     min_size     = 3
   }
 
-  ami_type       = "AL2_x86_64"  # Use Amazon EKS optimized AMI
+  ami_type       = "BOTTLEROCKET_x86_64"  # Use Amazon EKS optimized AMI
   instance_types = ["t3.medium"]
 
   depends_on = [aws_eks_cluster.main, aws_iam_role_policy_attachment.eks_cluster_AmazonEKSClusterPolicy]
